@@ -1,7 +1,7 @@
 package com.infogalaxy.employeewagecomp;
 
 import java.util.Random;
-import java.util.Scanner;
+
 
 public class EmployeeWageComp {
 
@@ -9,27 +9,48 @@ public class EmployeeWageComp {
 		
 		int attendance = 0;
 		int dailywage = 0;
-		final int  WAGEPERHR = 20;
-		final int FULLDAYHR = 8;
+		final int  WAGE_PER_HR = 20;
+		final int FULL_DAY_HR = 8;
+		final int PART_TIME_HR = 4;
+		int employee_type = 0;
 		
 		
 		//Scanner scanner = new Scanner(System.in);
 		
 		System.out.println("Welcome to Employee Wage Computation Program");
 		
-		//Code For Generate Random Number With Range
+		//Code For Generate Random Number With Range of Nine 
 		Random random = new Random();
-		attendance=random.nextInt(9)%2;
-		System.out.println("Attendance:-"+attendance);
+		attendance = random.nextInt(9)%2;
+		
+		
+		//System.out.println("Attendance:-"+attendance);
 		
 		//attendance=scanner.nextInt();
-		if (attendance==0) {
+		if (attendance==0) 
+		{
 			System.out.println("Employee Is Absent");
 		}
-		else {
+		else 
+		{
 			System.out.println("Employee Is Present");
-			dailywage = WAGEPERHR*FULLDAYHR;
-			System.out.println("Employee Wage Is :="+dailywage);
+			employee_type = random.nextInt(9)%2;
+			
+			
+				if (employee_type==0) 
+				{
+					System.out.println("Employee Is PartTime:");
+					dailywage = WAGE_PER_HR*PART_TIME_HR;
+				}
+				else
+				{
+					System.out.println("Employee Is FullTime :");
+					dailywage = WAGE_PER_HR*FULL_DAY_HR;
+				}
+				
+				System.out.println("Employee Wage Is :="+dailywage);
+			
+			
 		}
 		
 		
