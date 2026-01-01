@@ -8,12 +8,14 @@ public class EmployeeWageComp {
 	public static void main(String[] args) {
 		
 		int attendance = 0;
+		int dailywage = 0;
+		final int  WAGEPERHR = 20;
+		final int FULLDAYHR = 8;
+		
+		
 		//Scanner scanner = new Scanner(System.in);
 		
 		System.out.println("Welcome to Employee Wage Computation Program");
-		
-		System.out.println("Enter The Attendance :[Absent=0/Present=1]:");
-		
 		
 		//Code For Generate Random Number With Range
 		Random random = new Random();
@@ -26,6 +28,8 @@ public class EmployeeWageComp {
 		}
 		else {
 			System.out.println("Employee Is Present");
+			dailywage = WAGEPERHR*FULLDAYHR;
+			System.out.println("Employee Wage Is :="+dailywage);
 		}
 		
 		
